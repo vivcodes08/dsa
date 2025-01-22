@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe build active file",
+			"command": "C:\\MinGW\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\executables\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\MinGW\\bin\\g++.exe"
+		},
+		{
+			"type": "shell",
+			"label":"Run C/C++",
+			"command":"${fileDirname}\\executables\\${fileBasenameNoExtension}.exe",
+			"options": {
+				"cwd": "${fileDirname}",
+			},
+			"problemMatcher":[
+				"$gcc"
+			],
+			"group":{
+				"kind": "build",
+				"isDefault": true
+			},
+			"dependsOn":["C/C++: gcc.exe build active file"],
+			"detail": "execute c/cpp programmes"
+		}
+		
+	]
+}
