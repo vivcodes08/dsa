@@ -24,11 +24,11 @@ let t = new Array(N + 1).fill(null).map(() => new Array(W + 1).fill(-1));
     // Replace N----> i
     // Replace W---->j
     function knapsack(wt,val,W,N){
-        let t = new Array(W + 1).fill(0);
+    
         for (let i=1 ;i<N+1 ; i++){
             for(let j=1 ;j<W+1 ;j++){
 
-                if(wt[i-1] <= W){
+                if(wt[i-1] <= j){
                     console.log("1st",val[i-1]+ t[i-1][j-wt[i-1]])
                     console.log("2nd",t[i-1][j])
                    t[i][j]=Math.max(
