@@ -6,8 +6,6 @@ const W=50
 const N=3
 
 
-
-
 function knapsack(wt,val,W,N){
 
     // base condition
